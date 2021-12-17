@@ -1,3 +1,7 @@
+const http = require('http');
+setInterval(function () {
+    http.get("https://juann-node-project.herokuapp.com/");
+}, 600000);
 const express = require("express");
 const morgan = require('morgan')
 const winston = require('./config/winston')
