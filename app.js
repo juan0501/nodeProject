@@ -117,7 +117,7 @@ room.on("connection", socket => {
         delete onlineChatUsers[socket.name];
         room.emit("updateUserList", Object.keys(onlineChatUsers));
         winston.info(`user ${socket.name} disconnected`);
-    }); f
+    });
 
     socket.on("chat", data => {
         winston.info(data);
